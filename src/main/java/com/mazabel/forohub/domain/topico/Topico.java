@@ -17,7 +17,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Topico {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,6 +30,7 @@ public class Topico {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
     @JoinColumn(name = "curso_id")
+    @ManyToOne()
     private  Curso curso;
 
 

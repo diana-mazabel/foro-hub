@@ -1,17 +1,11 @@
 package com.mazabel.forohub.controller;
 
 import com.mazabel.forohub.domain.curso.Curso;
-import com.mazabel.forohub.domain.curso.CursoRepository;
+import com.mazabel.forohub.domain.repository.CursoRepository;
 import com.mazabel.forohub.domain.curso.DatosCurso;
 import com.mazabel.forohub.domain.curso.DatosListadoCurso;
-import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Limit;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
