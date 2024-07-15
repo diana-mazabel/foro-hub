@@ -9,13 +9,14 @@ public record DatosListadoTopico(
         String mensaje,
         String fechaCreacion,
         Status status,
-        String usuario,
+        String autor,
         String curso
 ) {
 
     public DatosListadoTopico(Topico topico) {
-        this(topico.getId(), topico.getTitulo(), topico.getMensaje(), topico.getFechaCreacion().toString(),
-                topico.getStatus(), topico.getUsuario().getUsername(), topico.getCurso().getNombre()
+        this(topico.getId(), topico.getTitulo(), topico.getMensaje(),
+                topico.getFechaCreacion().toString(), topico.getStatus(),
+                topico.getAutor(), topico.getCurso().toString()
                 );
     }
 }

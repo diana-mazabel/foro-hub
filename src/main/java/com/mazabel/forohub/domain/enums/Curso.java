@@ -1,9 +1,8 @@
 package com.mazabel.forohub.domain.enums;
 
-public enum Categoria {
+public enum Curso {
     PROYECTOS,
-    HERRAMIENTAS,
     CONSTRUCCION,
-    ESTILOS,
+    TEORIA,
     URBANISMO
 }

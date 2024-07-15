@@ -1,7 +1,6 @@
 package com.mazabel.forohub.domain.usuario;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import lombok.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,7 +11,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity(name = "Usuario")
-@Table(name = "usuario")
+@Table(name = "usuarios")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -33,16 +32,6 @@ public class Usuario implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public String getUsername() {
-        return username;
     }
 
     @Override
